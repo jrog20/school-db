@@ -13,7 +13,8 @@ ADD FOREIGN KEY(client)
 REFERENCES client(client_id)
 ON DELETE SET NULL;
 
-*This is a many to many - connecting participant and course - A course may have many participants and a participant may take many courses*
+-- This is a many to many - connecting participant and course - 
+-- A course may have many participants and a participant may take many courses
 
 CREATE TABLE takes_course (
   participant_id INT,
