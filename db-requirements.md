@@ -14,13 +14,13 @@ The entities that we will create tables for are: clients, teachers, courses and 
 
 #3: Which attributes do we want to store?
 
-A. Clients
+A. Client
 client_id
 client_name
 address
 industry
 
-B. Teachers
+B. Teacher
 teacher_id
 first_name
 last_name
@@ -30,7 +30,7 @@ language_1
 language_2
 tax_id
 
-C. Courses
+C. Course
 course_id
 course_name
 course_length_weeks
@@ -41,7 +41,7 @@ in_school (y/n) - (if no, takes place in client's office)
 *teacher (has one - A course has one teacher) - this attribute is a foreign key, which references the teacher_id attribute in the teacher entity
 *client (has one - A course is offered by A client) - Each client may offer multiple courses through the school, but each course may be associated with a maximum of 1 client, so again we have a 1-to-N relationship.
 
-D. Participants
+D. Participant
 participant_id
 first_name
 last_name
