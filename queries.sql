@@ -120,22 +120,29 @@ WHERE takes_course.course_id =
     (SELECT takes_course.course_id 
     WHERE course.teacher = 6);
 
--- queries for new table, industry_prospects
+-- Get list of client name, industry, and industry outlook 
+-- where there is an outlook listed for the industry (inner join -> both tables must have a value)
 SELECT client.client_name, client.industry, industry_prospects.outlook
 FROM client
 JOIN industry_prospects
 ON client.industry = industry_prospects.industry;
 
+-- Get list of client name, industry, and industry outlook 
+-- regardless if there is an outlook listed for the industry (left join -> right table values can be null)
 SELECT client.client_name, client.industry, industry_prospects.outlook
 FROM client
 LEFT JOIN industry_prospects
 ON client.industry = industry_prospects.industry;
 
+-- Get list of client name, industry, and industry outlook 
+-- regardless if there is a client name listed for the outlook (right join -> left table values can be null)
 SELECT client.client_name, client.industry, industry_prospects.outlook
 FROM client
 RIGHT JOIN industry_prospects
 ON client.industry = industry_prospects.industry;
 
+-- Get list of client name, industry, and industry outlook 
+-- regardless if there are missing values on either side (full join -> include all rows from both tables, any missing values = null)
 SELECT client.client_name, client.industry, industry_prospects.outlook
 FROM client
 FULL JOIN industry_prospects
