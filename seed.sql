@@ -58,3 +58,10 @@ INSERT INTO takes_course VALUES
 (114, 12),
 (112, 19),
 (113, 19);
+
+INSERT INTO industry_prospects VALUES
+('Retail', 'Good'),
+('Hospitality', 'Poor'),
+('Logistics', 'Terrible'),
+('Tourism', 'Great'),
+('Events', 'Good');
