@@ -35,3 +35,8 @@ CREATE TABLE course (
   teacher INT,
   client INT
 );
+
+CREATE TABLE industry_prospects (
+  industry VARCHAR(20) PRIMARY KEY,
+  outlook VARCHAR(20)
+);
